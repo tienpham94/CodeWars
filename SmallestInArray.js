@@ -9,10 +9,10 @@ You can assume, for the purpose of this kata, that the supplied array will not b
 
 class SmallestIntegerFinder {
   findSmallestInt(args) {
-    const array = Array.from(args).sort(function(a,b){
-      return b-a;
+    const array = Array.from(args).sort(function(a, b) {
+      return b - a;
     });
 
-    return array[array.length -1]
+    return array[array.length - 1];
   }
 }
