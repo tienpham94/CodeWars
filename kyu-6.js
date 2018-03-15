@@ -102,3 +102,28 @@ function toWeirdCase(string){
           .map(word => word.split("").map((word, ind) => ind%2 == 0 ? word.toUpperCase() : word).join(""))
           . join(" ")
 }
+
+// Return the count of characters in the given string.
+
+// For example, for the string 'aba' the result should be: {'a': 2, 'b': 1}
+
+// What if the string is empty ? Then the result should be empty as well: { }
+
+// Note for C#: Use a Dictionary<char, int> for this kata!
+
+function count (string) {  
+    // The function code should be here
+    const obj = {}
+    if(!string){
+      return obj
+    }
+    string.split("").map((letter) => {
+      obj[letter] ? obj[letter] = obj[letter] + 1 : obj[letter] = 1
+      
+    })
+    return obj
+  }
+  
+  console.log(count("aba"))
+  
+  
