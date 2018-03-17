@@ -34,5 +34,27 @@ var palindromeChainLength = function(n, step = 0) {
   
 };
   
+// How can you tell an extrovert from an introvert at NSA? Va gur ryringbef, gur rkgebireg ybbxf ng gur BGURE thl'f fubrf.
+
+// I found this joke on USENET, but the punchline is scrambled. Maybe you can decipher it? According to Wikipedia, ROT13 (http://en.wikipedia.org/wiki/ROT13) is frequently used to obfuscate jokes on USENET.
+
+// Hint: For this task you're only supposed to substitue characters. Not spaces, punctuation, numbers etc. Test examples:
+
+// rot13("EBG13 rknzcyr.") == "ROT13 example.";
+// rot13("This is my first ROT13 excercise!" == "Guvf vf zl svefg EBG13 rkprepvfr!"
+
+
+function rot13(str) {
+  return str.split("").map(char => {
+    if((char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 109)|| (char.charCodeAt(0) >= 65 && char.charCodeAt(0) <= 77)){
+      return String.fromCharCode(char.charCodeAt(0) +13) 
+    } 
+    if((char.charCodeAt(0) >= 110 && char.charCodeAt(0) <= 122)|| (char.charCodeAt(0) >= 78 && char.charCodeAt(0) <= 90)){
+      return String.fromCharCode(char.charCodeAt(0) -13) 
+    } 
+
+    return char
+  }).join("")
+}
 
   
